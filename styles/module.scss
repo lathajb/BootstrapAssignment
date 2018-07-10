@@ -1,39 +1,155 @@
 
+$body-bg: #fff;
+$body-color: mintcream;
+$font-family-base: 'Raleway', sans-serif;
 
-.logosection{
-    height: 40%;
+@mixin padding($values...) {    
+    @each $var in $values {
+        padding: #{$var};
+    }
 }
 
+@mixin margin($values...) {    
+    @each $var in $values {
+        margin: #{$var};
+    }
+}
+
+
+/***********************Header logo section***************************/
+
+.removespace{
+    @include margin(0px);
+	@include padding(0px);
+}
+
+.logo-bg-color{
+    // background-image: url(../img/banner-bg.jpg);
+    background-color: $body-color;
+
+}
+
+
+
+
+.removespace{
+   @include padding(0px);
+   @include margin(0px);
+}
+
+.logo-bg-color{
+    // background-image: url(../img/banner-bg.jpg);
+    background-color: $body-color;
+    
+}
+
+
+/***********************Header navigation section***************************/
+$nav-tabs-link-active-color: red;
 .navitem{
     color: black;
     font-style:italic;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.fa-settingsicon{
+    position:absolute;
+    right: 10px;
+    color: black;
+    padding-top: 10px;
+}
+
+/************************* hero element section*********************/
+
+.heroelement{
+     @include margin(10px);
+}
+
+
+/********************************* Main side navbar section*****************/
+
+.sidenavbarFeature{
+    text-align: left;
+    margin: 10px;
     font-weight: 500;
-}
-.imagerepeat{
-padding-left: 10px;
-}
-
-.removepadding{
-    padding: 0;  
-}
-
-.footersection{
-    text-align: center;
-    margin:30px;
-}
-
-.circle-icon {
+    color: black;
+    background-color:#34700f;
     
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border-color: white;
-    border-width: medium;
-    text-align: center;
-    line-height: 50px;
-    vertical-align: middle;
-    font-size: 30px;
 }
+
+#sidenavbarFeature > .nav-link{
+    text-align: center;
+    font-style:italic;
+    color: white;
+}
+
+/********************************* Main card section **********************/     
+  $card-columns-margin : 10px;
+  $card-columns-margin: 10px;
+
+.card{
+  padding: 10px;
+  color: black;
+}
+
+#feature-one > #cardfeature {
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+}
+
+
+/************************  Footer section *************************/
+
+
+footer > div {
+    background-image: url(../img/pattern_bg.jpg);
+}
+
+#footer-row1{
+     @include margin(10px,0px,0px,0px);
+}
+
+#footer-row2{
+     @include margin(0px);
+}
+
+ .footersection{
+    text-align: center;
+    font-size: 14px;
+    font-style:normal;
+    text-align: center;
+    color: white;
+    @include margin(15px);
+
+    }
+
+ .circle-icon { 
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border-color: white;
+        border-width: medium;
+        text-align: center;
+        line-height: 50px;
+        vertical-align: middle;
+        font-size: 30px;
+        margin: 0px;
+        }
+
+.socialiconsalign{
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+.socialicons{
+    margin:auto;
+    padding:40px;
+}
+
 .fa-home{
     background:lightcoral;
 }
@@ -46,47 +162,31 @@ padding-left: 10px;
     background:dodgerblue;
 }
 
-
-#footer-row1{
-    background: black;
-}
-
-footer div {
-    background-image: url(../img/pattern_bg.jpg);
-}
-
-.logo-design{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.footer-icon-design{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:#34700f;
     font-size: 20px;
     padding-left: 10px;
 }
 
-.footerparagraph{
-    text-align: center;
-    font-style:italic;
+
+#socialicons > #facebooklink{
+ color: darkblue;
+}
+
+#socialicons > #twitterlink{
     color: white;
 }
 
-.navanchor{
-    text-align: center;
-    font-style:italic;
-    color: white;
+#socialicons > #googlelink{
+    color: red;
 }
 
-
-.footerphoneparagraph{
-    text-align: center;
-    font-style:italic;
-    padding-right: 30px;
+#socialicons > #linkedinlink{
+    color: blue;
 }
 
-.footersection p{
-    font-size: 14px;
-    font-style:italic;
-    padding :0;
-    margin:0;
-}
+/*************************************Copy right section*******************/
 
 .copyright{
     text-align:center;
@@ -98,79 +198,13 @@ footer div {
     font-size: 12px;
 }
 
-.socialicons{
-    margin:auto;
-    padding:40px;
-}
 
-.fa {
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
+/************************************** modal *****************************/
 
-.fa:hover {
-    opacity: 0.7;
-}
-
-.f-facebook {
-  font-size: 50px;
-  color:#4b83cc;
-}
-
-.f-twitter {
-  font-size: 50px;
-  color: white;
-}
-
-.f-google {
-  font-size: 50px;
-  color:#bd3333;
-}
-
-.f-linkedin {
-  color: #3c4ca2;
-  font-size: 50px;
-}
-
-.navbarFeature{
-    text-align: left;
-    margin: 10px;
-    font-weight: 500;
-    color: black;    
-}
-
-.sidenavbarFeature{
-    text-align: left;
-    margin: 10px;
-    font-weight: 500;
+.modal-header > #exampleModalLabel {
     color: black;
-    background-color:#34700f;
-    
-}
-
-.active{
-    color:black;
-    font-size: 19px;
 }
 
 
-.card{
-  margin: 10px;
-  padding: 10px;
-}
 
-.card-footer{
-    font-weight: 400;
-}
 
-#cardfeature{
-    text-align: center;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.searchform{
-    padding-left: 700px;
-}
