@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="./node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
-    
+
 </head>
 
 <body class="mw-100 mh-100">
@@ -41,200 +41,497 @@
 
         <div class="row w-100 removespace" id="navigationsection">
             <nav class="navbarFeature w-100 logo-bg-color" id="navbarFeature">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item" data-toggle="tooltip">
-                        <a name="Home" aria-label="Home" class="nav-link navitem active" href="#" alt="Home" data-toggle="tooltip" title="Home">Home</a>
+
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a name="Receipes" aria-label="Receipes" class="nav-link navitem" href="#" alt="Recipes" data-toggle="tooltip" title="Recipes">Recipes</a>
+                        <a class="nav-link" id="receipies-tab" data-toggle="tab" href="#receipies" role="tab" aria-controls="receipies" aria-selected="false">Receipies</a>
                     </li>
                     <li class="nav-item">
-                        <a name="About" aria-label="About" class="nav-link navitem" href="#" alt="About" data-toggle="tooltip" title="About">About</a>
+                        <a class="nav-link" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="false">About</a>
                     </li>
                     <li class="nav-item">
-                        <a name="Contact" aria-label="Contact"  class="nav-link navitem" href="#" alt="Contact" data-toggle="tooltip" title="Contact">Contact</a>
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
                     </li>
-                    <!--<form class="form-inline searchform">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Find delicious" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>-->
+
+                    <a name="Modallink" aria-label="Order Modal" href="#exampleModal" data-toggle="modal" data-target="#exampleModal" alt="Modal">
+                        <i class="fa fa-cog fa-settingsicon"></i>
+                    </a>
                 </ul>
 
-                 <a name="Modallink" aria-label="Order Modal" href="#exampleModal" data-toggle="modal" data-target="#exampleModal" alt="Modal"> 
-                        <i class="fa fa-cog fa-settingsicon"></i>
-                </a>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <article class="heroelement">
+                            <div class="container">
+                                <div id="carouselFeature" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100" src="./img/brigitte-tohm-107901-1.jpg" alt="First slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="./img/brooke-lark-194252.jpg" alt="Second slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="./img/dragne-marius-117368.jpg" alt="Third slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="./img/copy-page-04.jpg" alt="Four slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="./img/slider-06.jpg" alt="Five slide">
+                                        </div>
+                                    </div>
+                                    <a name="previous" aria-label="Previous" class="carousel-control-prev" href="#carouselFeature" role="button" data-slide="prev"
+                                        alt="previous">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a name="next" aria-label="Next" class="carousel-control-next" href="#carouselFeature" role="button" data-slide="next" alt="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <main>
+
+                            <div class="container">
+
+                                <div class="row" id="cardfeature">
+
+                                    <div class="col-md-3 sidenavbar">
+
+                                        <!-- side navigation tab implemented using list groups -->
+                                        <div class="list-group" id="list-tab" role="tablist">
+                                            <a class="list-group-item list-group-item-action active" id="list-salads-list" data-toggle="list" href="#list-salads" role="tab"
+                                                aria-label="Salads">Salads</a>
+
+                                                <a class="list-group-item list-group-item-action" id="list-maincourse-list" data-toggle="list" href="#list-maincourse" role="tab"
+                                                    aria-label="Maincourse">Maincourse</a>
+
+                                                    <a class="list-group-item list-group-item-action" id="list-deserts-list" data-toggle="list" href="#list-deserts" role="tab"
+                                                        aria-label="Deserts">Deserts</a>
+
+                                                        <a class="list-group-item list-group-item-action" id="list-appetizers-list" data-toggle="list" href="#list-appetizers" role="tab"
+                                                            aria-label="Appetizers">Appetizers</a>
+                                        </div>
+
+                                        <!-- side navigation tab implemented using list groups ends here-->
+
+
+                                        <!--<nav class="nav flex-column sidenavbarFeature" id="sidenavbarFeature">
+                                            <a name="Salads" class="nav-link active" href="" alt="Salads" aria-label="Salads">Salads</a>
+                                            <a name="Maincourse" class="nav-link" href="" alt="Maincourse" aria-label="Maincourse">Maincourse</a>
+                                            <a name="Deserts" class="nav-link" href="" alt="Deserts" aria-label="Deserts">Deserts</a>
+                                            <a name="Appetizers" class="nav-link" href="" alt="Appetizers" aria-label="Appetizers">Appetizers</a>
+                                        </nav>-->
+                                    </div>
+
+                                    <div class="col-md-9 cardsection">
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <div class="tab-pane fade show active" id="list-salads" role="tabpanel" aria-labelledby="list-salads-list">
+                                                <div class="row">
+                                                    <!-- card section starts here -->
+                                                    <div class="card-deck">
+
+                                                        <div class="card">
+                                                            <img class="card-img-top" src="./img/salad-01.jpg" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Greek Salad</h5>
+                                                                <p class="card-text">Microwave grated carrots and minced garlic in 1/4 cup water
+                                                                    until crisp-tender. Drain; toss with lemon juice, olive
+                                                                    oil, salt, red pepper flakes and parsley.</p>
+                                                                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <h6 class="text-center">$70</h6>
+                                                            </div>
+                                                        </div>
+                                                    
+
+                                                    
+                                                        <div class="card">
+                                                            <img class="card-img-top" src="./img/salad-02.jpg" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Caesar Salad</h5>
+                                                                <p class="card-text">Mix rice vinegar and lime juice with salt, sugar and fish
+                                                                    sauce. Toss with julienned jicama and apple, chopped
+                                                                    scallions and mint.</p>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <h6 class="text-center">$100</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="card">
+                                                            <img class="card-img-top" src="./img/salad-03.jpg" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Garden Salad</h5>
+                                                                <p class="card-text">Mix rice vinegar and lime juice with salt, sugar and fish
+                                                                    sauce. Toss with julienned jicama and apple, chopped
+                                                                    scallions and mint.</p>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <h6 class="text-center">$30</h6>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                  
+                                                    <!-- card section ends here -->
+
+                                                </div>
+                                                <!-- row ends here -->
+                                                <!-- second row starts here -->
+                                                <div class="row" id="secondrow">
+
+                                                    <div class="card-deck">
+                                                        <div class="card">
+                                                            <img class="card-img-top" src="./img/salad-02.jpg" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Caesar Salad</h5>
+                                                                <p class="card-text">Mix rice vinegar and lime juice with salt, sugar and fish
+                                                                    sauce. Toss with julienned jicama and apple, chopped
+                                                                    scallions and mint.</p>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <h6 class="text-center">$100</h6>
+                                                            </div>
+                                                        </div>
+                                                         <div class="card">
+                                                            <img class="card-img-top" src="./img/salad-02.jpg" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Caesar Salad</h5>
+                                                                <p class="card-text">Mix rice vinegar and lime juice with salt, sugar and fish
+                                                                    sauce. Toss with julienned jicama and apple, chopped
+                                                                    scallions and mint.</p>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <h6 class="text-center">$100</h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card">
+                                                            <img class="card-img-top" src="./img/salad-03.jpg" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Garden Salad</h5>
+                                                                <p class="card-text">Mix rice vinegar and lime juice with salt, sugar and fish
+                                                                    sauce. Toss with julienned jicama and apple, chopped
+                                                                    scallions and mint.</p>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <h6 class="text-center">$30</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                 <!-- second row ends here -->
+                                            </div>
+                                            <!-- salads tab ends here -->
+                                            <div class="tab-pane fade" id="list-maincourse" role="tabpanel" aria-labelledby="list-maincourse-list">
+
+                                                <div class="row">
+                                                    <!-- card section starts here -->
+                                                    <div class="card-deck">
+                                                        <div class="card">
+                                                            <img class="card-img-top" src="./img/maincourse1.jpg" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Chicken Florentine Casserole</h5>
+                                                                <p class="card-text">Microwave grated carrots and minced garlic in 1/4 cup water
+                                                                    until crisp-tender. Drain; toss with lemon juice, olive
+                                                                    oil, salt, red pepper flakes and parsley.</p>
+                                                                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <h6 class="text-center">$70</h6>
+                                                            </div>
+                                                        </div>
+                                                    
+
+                                                    
+                                                        <div class="card">
+                                                            <img class="card-img-top" src="./img/maincourse2.jpg" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Slow Cooker Texas Pulled Pork</h5>
+                                                                <p class="card-text">Mix rice vinegar and lime juice with salt, sugar and fish
+                                                                    sauce. Toss with julienned jicama and apple, chopped
+                                                                    scallions and mint.</p>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <h6 class="text-center">$100</h6>
+                                                            </div>
+                                                        </div>
+
+                                                    
+                                                   
+                                                        <div class="card">
+                                                            <img class="card-img-top" src="./img/maincourse3.jpg" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Balsamic Roasted Pork Loin</h5>
+                                                                <p class="card-text">Succulent pork loin chops are paired brilliantly with slices
+                                                                    of tart apple cooked in a, chopped scallions and mint.</p>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <h6 class="text-center">$30</h6>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <!-- card section ends here -->
+
+                                                </div>
+                                                <!-- row ends here -->
+                                            </div>
+                                            <div class="tab-pane fade" id="list-deserts" role="tabpanel" aria-labelledby="list-deserts-list">
+
+                                                <div class="row">
+                                                    <!-- card section starts here -->
+                                                    <div class="card-deck">
+                                                        <div class="card">
+                                                            <img class="card-img-top" src="./img/maincourse4.jpg" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">White Cheese Chicken Lasagna</h5>
+                                                                <p class="card-text">Microwave grated carrots and minced garlic in 1/4 cup water
+                                                                    until crisp-tender. Drain; toss with lemon juice, olive
+                                                                    oil, salt, red pepper flakes and parsley.</p>
+                                                                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <h6 class="text-center">$70</h6>
+                                                            </div>
+                                                        </div>
+                                                    
+
+                                                   
+                                                        <div class="card">
+                                                            <img class="card-img-top" src="./img/maincourse5.jpg" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Slow Cooker Salisbury Steak</h5>
+                                                                <p class="card-text">Ground beef gets a boost of flavor from onion soup mix in
+                                                                    this quick and easy slow cooker…</p>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <h6 class="text-center">$100</h6>
+                                                            </div>
+                                                        </div>
+
+                                                    
+                                                    
+                                                        <div class="card">
+                                                            <img class="card-img-top" src="./img/maincourse6.jpg" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Garden Salad</h5>
+                                                                <p class="card-text">Mix rice vinegar and lime juice with salt, sugar and fish
+                                                                    sauce. Toss with julienned jicama and apple, chopped
+                                                                    scallions and mint.</p>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <h6 class="text-center">$30</h6>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <!-- card section ends here -->
+
+                                                </div>
+                                                <!-- row ends here -->
+                                            </div>
+                                            <div class="tab-pane fade" id="list-appetizers" role="tabpanel" aria-labelledby="list-appetizers-list">
+                                                <div class="row">
+                                                    <!-- card section starts here -->
+                                                    <div class="card-deck">
+                                                        <div class="card">
+                                                            <img class="card-img-top" src="./img/hqimage1.jpg" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Awesome Slow Cooker Pot Roast</h5>
+                                                                <p class="card-text">Microwave grated carrots and minced garlic in 1/4 cup water
+                                                                    until crisp-tender. Drain; toss with lemon juice, olive
+                                                                    oil, salt, red pepper flakes and parsley.</p>
+                                                                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <h6 class="text-center">$70</h6>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                        <div class="card">
+                                                            <img class="card-img-top" src="./img/hqimage2.jpg" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Easy Tuna Noodle Casserole</h5>
+                                                                <p class="card-text">Mix rice vinegar and lime juice with salt, sugar and fish
+                                                                    sauce. Toss with julienned jicama and apple, chopped
+                                                                    scallions and mint.</p>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <h6 class="text-center">$100</h6>
+                                                            </div>
+                                                        </div>
+
+                                                   
+                                                        <div class="card">
+                                                            <img class="card-img-top" src="./img/hqimage3.jpg" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Chicken Pot Pie IX</h5>
+                                                                <p class="card-text">Mix rice vinegar and lime juice with salt, sugar and fish
+                                                                    sauce. Toss with julienned jicama and apple, chopped
+                                                                    scallions and mint.</p>
+                                                            </div>
+                                                            <div class="card-footer">
+                                                                <h6 class="text-center">$30</h6>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <!-- card section ends here -->
+
+                                                </div>
+                                                <!-- row ends here -->
+                                            </div>
+                                        </div>
+
+                                        <!-- child row ends -->
+
+                                    </div>
+                                    <!-- parent column ends -->
+
+                                </div>
+                                <!-- row end -->
+
+                            </div>
+                            <!-- container end -->
+                        </main>
+
+                        <footer>
+                            <div class="row" id="footer-row1">
+                                <div class="col-md-3">
+                                    <section class="footersection" id="footerhomesection">
+                                        <i class="fa fa-home circle-icon"></i>
+                                        <p><img class="w-100 h-100" src="./img/logo.png" alt="Logo">
+                                            <p>
+                                                <!--<span class="logo-design">RESTURANT</span>-->
+                                                <p class="footerparagraph">
+                                                    #5-819, Bandla Street,
+                                                </p>
+                                                <p class="footerparagraph">Santhapet,</p>
+                                                <p class="footerparagraph">Chittoor.</p>
+                                    </section>
+                                </div>
+                                <div class="col-md-3">
+                                    <section class="footersection" id="footerphonesection">
+                                        <i class="fa fa-phone circle-icon"></i>
+                                        <p class="footer-icon-design">PHONE</p>
+                                        <p class="footerparagraph">+91 7736573509</p>
+                                        <p class="footerparagraph">+91 9840493087</p>
+                                    </section>
+                                </div>
+                                <div class="col-md-3">
+                                    <section class="footersection" id="footercontactsection">
+                                        <i class="fa fa-pencil circle-icon"></i>
+                                        <p class="footer-icon-design">WRITE US</p>
+                                        <p class="footerparagraph">jblatha@gmail.com</p>
+                                    </section>
+                                </div>
+                                <div class="col-md-3 socialiconsalign">
+                                    <section class="socialicons" id="socialicons">
+
+                                        <a id="facebooklink" name="facebooklink" href="" alt="facebook link" aria-label="Facebook link">
+                                            <i class="fa fa-facebook-square fa-3x"></i>
+                                        </a>
+                                        <a id="twitterlink" name="twitterlink" href="" alt="twitter link" aria-label="Twitter link">
+                                            <i class="fa fa-twitter-square fa-3x "></i>
+                                        </a>
+                                        <a id="googlelink" name="googlelink" href="" alt="google link" aria-label="Google link">
+                                            <i class="fa fa-google-plus-square fa-3x"></i>
+                                        </a>
+                                        <a id="linkedinlink" name="linkedinlink" href="" alt="linkedin" aria-label="Linkedin link">
+                                            <i class="fa fa-linkedin-square fa-3x"></i>
+                                        </a>
+
+                                    </section>
+                                </div>
+                                <hr>
+
+                            </div>
+                            <div class="row" id="footer-row2">
+                                <div class="col-md-12 copyright">
+                                    <p>@Copyright 2018 - Delicious. All rights reserved.</p>
+                                </div>
+                            </div>
+
+                        </footer>
+
+
+
+                    </div>
+
+                    <div class="tab-pane fade navtabcolor" id="receipies" role="tabpanel" aria-labelledby="receipies-tab">..Receipies.</div>
+
+                    <div class="tab-pane fade navtabcolor" id="about" role="tabpanel" aria-labelledby="about-tab">..About.</div>
+
+                    <div class="tab-pane fade navtabcolor" id="contact" role="tabpanel" aria-labelledby="contact-tab">..Contacts.</div>
+                </div>
+
+
             </nav>
         </div>
     </header>
 
-    <article class="heroelement">
-        <div class="container">
-            <div id="carouselFeature" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="./img/brigitte-tohm-107901-1.jpg" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="./img/brooke-lark-194252.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="./img/dragne-marius-117368.jpg" alt="Third slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="./img/copy-page-04.jpg" alt="Four slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="./img/slider-06.jpg" alt="Five slide">
-                    </div>
-                </div>
-                <a name="previous" aria-label="Previous" class="carousel-control-prev" href="#carouselFeature" role="button" data-slide="prev" alt="previous">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a name="next" aria-label="Next" class="carousel-control-next" href="#carouselFeature" role="button" data-slide="next" alt="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </article>
+
+    <!-- Modal section starts here-->
 
     <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Order Here</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                <form class="was-validated">
+                    <div class="modal-header">
+                        <p><img class="w-100 h-100" src="./img/logo.png" alt="Logo">
+                            <p>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="custom-control custom-checkbox">
+                            <p>
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1">Beef Empanadas</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label" for="customCheck2">Handmade pastries</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                <label class="custom-control-label" for="customCheck3">Savory beef and potatoes</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                <label class="custom-control-label" for="customCheck4">Empanadas</label>
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Order</button>
+                    </div>
+                </form>
+
+
             </div>
         </div>
     </div>
 
-    <main>
-
-         <div class="contatiner">
-            <section id="feature-one">
-                <div class="row" id="cardfeature">
-
-                    <nav class="nav flex-column sidenavbarFeature" id="sidenavbarFeature">
-                        <a name="Salads" class="nav-link active" href="" alt="Salads" aria-label="Salads">Salads</a>
-                        <a name="Maincourse" class="nav-link" href="" alt="Maincourse" aria-label="Maincourse">Maincourse</a>
-                        <a name="Deserts" class="nav-link" href="" alt="Deserts" aria-label="Deserts">Deserts</a>
-                        <a name="Appetizers" class="nav-link" href="" alt="Appetizers" aria-label="Appetizers">Appetizers</a>
-                    </nav>
-
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./img/salad-01.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Greek Salad</h5>
-                            <p class="card-text">Microwave grated carrots and minced garlic in 1/4 cup water until crisp-tender. Drain; toss with
-                                lemon juice, olive oil, salt, red pepper flakes and parsley.</p>
-                            <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-                        </div>
-                        <div class="card-footer">
-                            <h6>$70</h6>
-                        </div>
-                    </div>
-
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./img/salad-02.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Caesar Salad</h5>
-                            <p class="card-text">Mix rice vinegar and lime juice with salt, sugar and fish sauce. Toss with julienned jicama and
-                                apple, chopped scallions and mint.</p>
-                        </div>
-                        <div class="card-footer">
-                            <h6>$100</h6>
-                        </div>
-                    </div>
-
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="./img/salad-03.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Garden Salad</h5>
-                            <p class="card-text">Mix rice vinegar and lime juice with salt, sugar and fish sauce. Toss with julienned jicama and
-                                apple, chopped scallions and mint.</p>
-                        </div>
-                        <div class="card-footer">
-                            <h6>$30</h6>
-                        </div>
-                    </div>
 
 
-                </div>
-            
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <div class="row" id="footer-row1">
-            <div class="col-md-3">
-                <section class="footersection" id="footerhomesection">
-                    <i class="fa fa-home circle-icon"></i>
-                    <p><img class="w-100 h-100" src="./img/logo.png" alt="Logo">
-                        <p>
-                            <!--<span class="logo-design">RESTURANT</span>-->
-                            <p class="footerparagraph">
-                                #5-819, Bandla Street,
-                            </p>
-                            <p class="footerparagraph">Santhapet,</p>
-                            <p class="footerparagraph">Chittoor.</p>
-                </section>
-            </div>
-            <div class="col-md-3">
-                <section class="footersection" id="footerphonesection">
-                    <i class="fa fa-phone circle-icon"></i>
-                    <p class="footer-icon-design">PHONE</p>
-                    <p class="footerparagraph">+91 7736573509</p>
-                    <p class="footerparagraph">+91 9840493087</p>
-                </section>
-            </div>
-            <div class="col-md-3">
-                <section class="footersection" id="footercontactsection">
-                    <i class="fa fa-pencil circle-icon"></i>
-                    <p class="footer-icon-design">WRITE US</p>
-                    <p class="footerparagraph">jblatha@gmail.com</p>
-                </section>
-            </div>
-            <div class="col-md-3 socialiconsalign">
-                <section class="socialicons" id="socialicons">
-
-                    <a id="facebooklink" name="facebooklink" href="" alt="facebook link" aria-label="Facebook link">
-                        <i class="fa fa-facebook-square fa-3x"></i>
-                    </a>
-                    <a id="twitterlink" name="twitterlink" href="" alt="twitter link" aria-label="Twitter link">
-                        <i class="fa fa-twitter-square fa-3x "></i>
-                    </a>
-                    <a id="googlelink" name="googlelink" href="" alt="google link" aria-label="Google link">
-                        <i class="fa fa-google-plus-square fa-3x"></i>
-                    </a>
-                    <a id="linkedinlink" name="linkedinlink" href="" alt="linkedin" aria-label="Linkedin link">
-                        <i class="fa fa-linkedin-square fa-3x"></i>
-                    </a>
-
-                </section>
-            </div>
-            <hr>
-
-        </div>
-        <div class="row" id="footer-row2">
-            <div class="col-md-12 copyright">
-                <p>@Copyright 2018 - Delicious. All rights reserved.</p>
-            </div>
-        </div>
-
-    </footer>
-
+    <!-- modal section ends here -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>

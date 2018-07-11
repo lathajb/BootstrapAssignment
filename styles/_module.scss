@@ -1,8 +1,4 @@
 
-$body-bg: #fff;
-$body-color: mintcream;
-$font-family-base: 'Raleway', sans-serif;
-
 @mixin padding($values...) {    
     @each $var in $values {
         padding: #{$var};
@@ -28,21 +24,6 @@ $font-family-base: 'Raleway', sans-serif;
     background-color: $body-color;
 
 }
-
-
-
-
-.removespace{
-   @include padding(0px);
-   @include margin(0px);
-}
-
-.logo-bg-color{
-    // background-image: url(../img/banner-bg.jpg);
-    background-color: $body-color;
-    
-}
-
 
 /***********************Header navigation section***************************/
 $nav-tabs-link-active-color: red;
@@ -70,13 +51,16 @@ $nav-tabs-link-active-color: red;
 
 /********************************* Main side navbar section*****************/
 
+#cardfeature > .sidenavbar{
+//    background-color: $navbar-dark-color;
+   background-color:#cde4e9;
+}
+
 .sidenavbarFeature{
     text-align: left;
     margin: 10px;
     font-weight: 500;
     color: black;
-    background-color:#34700f;
-    
 }
 
 #sidenavbarFeature > .nav-link{
@@ -94,10 +78,8 @@ $nav-tabs-link-active-color: red;
   color: black;
 }
 
-#feature-one > #cardfeature {
-    text-align: center;
-    justify-content: center;
-    margin: 0;
+#cardfeature{
+   @include margin(0px); 
 }
 
 
@@ -148,6 +130,7 @@ footer > div {
 .socialicons{
     margin:auto;
     padding:40px;
+    text-align: center;
 }
 
 .fa-home{
@@ -206,5 +189,37 @@ footer > div {
 }
 
 
+#nav-tabContent{
+    color: #9d2020;
+}
 
+.orderbtn{
+    background-color: #39332f;
+}
+
+.orderdetails{
+     color:#39332f;
+     border: 1px solid #8f7979;
+}
+
+#myTabContent{
+    color: black;
+    text-align: center;
+    margin: auto;
+    
+}
+
+.navtabcolor{
+border: 2px solid green;
+}
+
+
+/************************************** Media query ***********************/
+
+@include media-breakpoint-down(sm) {
+
+body{
+    font-size: $font-size-sm;
+}
+}
 
