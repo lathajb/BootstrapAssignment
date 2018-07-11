@@ -86,17 +86,33 @@ $nav-tabs-link-active-color: red;
 /************************  Footer section *************************/
 
 
-footer > div {
-    background-image: url(../img/pattern_bg.jpg);
-}
-
 #footer-row1{
-     @include margin(10px,0px,0px,0px);
+     margin-top: 10px;
+     background-image: url(../img/pattern_bg.jpg);
+     margin-left: 0px;
+     margin-right: 0px;
 }
 
 #footer-row2{
-     @include margin(0px);
+    background-image: url(../img/pattern_bg.jpg);
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
 }
+
+.footercopyright{
+    margin: 0px;
+}
+
+.radiotextcolor{
+    color:#29ac6a;
+}
+
+.menudropdown{
+    margin: 10px;
+}
+
+
 
  .footersection{
     text-align: center;
@@ -106,7 +122,7 @@ footer > div {
     color: white;
     @include margin(15px);
 
-    }
+}
 
  .circle-icon { 
         width: 50px;

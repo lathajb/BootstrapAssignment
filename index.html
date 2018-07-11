@@ -8,7 +8,18 @@
 
     <link rel="stylesheet" type="text/css" href="./node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <!--<script>
+        $(function(){
 
+        $(".dropdown-menu li a").click(function(){
+
+        $(".btn:first-child").text($(this).text());
+        $(".btn:first-child").val($(this).text());
+
+    });
+
+    });
+    </script>-->
 </head>
 
 <body class="mw-100 mh-100">
@@ -44,7 +55,10 @@
 
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" 
+                           title="Home" 
+                           aria-controls="home" 
+                           aria-selected="true">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="receipies-tab" data-toggle="tab" href="#receipies" role="tab" aria-controls="receipies" aria-selected="false">Receipies</a>
@@ -56,14 +70,15 @@
                         <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
                     </li>
 
-                    <a name="Modallink" aria-label="Order Modal" href="#exampleModal" data-toggle="modal" data-target="#exampleModal" alt="Modal">
-                        <i class="fa fa-cog fa-settingsicon"></i>
-                    </a>
+                   
                 </ul>
-
+                 <a  aria-label="Order Modal" href="#exampleModal" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fa fa-cog fa-settingsicon"></i>
+                </a>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <article class="heroelement">
+                        
+                        <div class="heroelement">
                             <div class="container">
                                 <div id="carouselFeature" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
@@ -83,20 +98,19 @@
                                             <img class="d-block w-100" src="./img/slider-06.jpg" alt="Five slide">
                                         </div>
                                     </div>
-                                    <a name="previous" aria-label="Previous" class="carousel-control-prev" href="#carouselFeature" role="button" data-slide="prev"
-                                        alt="previous">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
+                                        <a  aria-label="Previous" class="carousel-control-prev" href="#carouselFeature" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
                                         </a>
-                                        <a name="next" aria-label="Next" class="carousel-control-next" href="#carouselFeature" role="button" data-slide="next" alt="next">
+                                        <a  aria-label="Next" class="carousel-control-next" href="#carouselFeature" role="button" data-slide="next">
                                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                             <span class="sr-only">Next</span>
                                         </a>
                                 </div>
                             </div>
-                        </article>
+                        </div>
 
-                        <main>
+                        <div>
 
                             <div class="container">
 
@@ -150,9 +164,9 @@
                                                                 <h6 class="text-center">$70</h6>
                                                             </div>
                                                         </div>
-                                                    
 
-                                                    
+
+
                                                         <div class="card">
                                                             <img class="card-img-top" src="./img/salad-02.jpg" alt="Card image cap">
                                                             <div class="card-body">
@@ -181,7 +195,7 @@
 
                                                     </div>
 
-                                                  
+
                                                     <!-- card section ends here -->
 
                                                 </div>
@@ -202,7 +216,7 @@
                                                                 <h6 class="text-center">$100</h6>
                                                             </div>
                                                         </div>
-                                                         <div class="card">
+                                                        <div class="card">
                                                             <img class="card-img-top" src="./img/salad-02.jpg" alt="Card image cap">
                                                             <div class="card-body">
                                                                 <h5 class="card-title">Caesar Salad</h5>
@@ -230,7 +244,7 @@
 
                                                 </div>
 
-                                                 <!-- second row ends here -->
+                                                <!-- second row ends here -->
                                             </div>
                                             <!-- salads tab ends here -->
                                             <div class="tab-pane fade" id="list-maincourse" role="tabpanel" aria-labelledby="list-maincourse-list">
@@ -251,9 +265,9 @@
                                                                 <h6 class="text-center">$70</h6>
                                                             </div>
                                                         </div>
-                                                    
 
-                                                    
+
+
                                                         <div class="card">
                                                             <img class="card-img-top" src="./img/maincourse2.jpg" alt="Card image cap">
                                                             <div class="card-body">
@@ -267,8 +281,8 @@
                                                             </div>
                                                         </div>
 
-                                                    
-                                                   
+
+
                                                         <div class="card">
                                                             <img class="card-img-top" src="./img/maincourse3.jpg" alt="Card image cap">
                                                             <div class="card-body">
@@ -305,9 +319,9 @@
                                                                 <h6 class="text-center">$70</h6>
                                                             </div>
                                                         </div>
-                                                    
 
-                                                   
+
+
                                                         <div class="card">
                                                             <img class="card-img-top" src="./img/maincourse5.jpg" alt="Card image cap">
                                                             <div class="card-body">
@@ -320,8 +334,8 @@
                                                             </div>
                                                         </div>
 
-                                                    
-                                                    
+
+
                                                         <div class="card">
                                                             <img class="card-img-top" src="./img/maincourse6.jpg" alt="Card image cap">
                                                             <div class="card-body">
@@ -358,7 +372,7 @@
                                                                 <h6 class="text-center">$70</h6>
                                                             </div>
                                                         </div>
-                                                    
+
                                                         <div class="card">
                                                             <img class="card-img-top" src="./img/hqimage2.jpg" alt="Card image cap">
                                                             <div class="card-body">
@@ -372,7 +386,7 @@
                                                             </div>
                                                         </div>
 
-                                                   
+
                                                         <div class="card">
                                                             <img class="card-img-top" src="./img/hqimage3.jpg" alt="Card image cap">
                                                             <div class="card-body">
@@ -404,12 +418,12 @@
 
                             </div>
                             <!-- container end -->
-                        </main>
+                        </div>
 
-                        <footer>
+                        <div>
                             <div class="row" id="footer-row1">
                                 <div class="col-md-3">
-                                    <section class="footersection" id="footerhomesection">
+                                    <div class="footersection" id="footerhomesection">
                                         <i class="fa fa-home circle-icon"></i>
                                         <p><img class="w-100 h-100" src="./img/logo.png" alt="Logo">
                                             <p>
@@ -419,51 +433,51 @@
                                                 </p>
                                                 <p class="footerparagraph">Santhapet,</p>
                                                 <p class="footerparagraph">Chittoor.</p>
-                                    </section>
+                                    </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <section class="footersection" id="footerphonesection">
+                                    <div class="footersection" id="footerphonesection">
                                         <i class="fa fa-phone circle-icon"></i>
                                         <p class="footer-icon-design">PHONE</p>
                                         <p class="footerparagraph">+91 7736573509</p>
                                         <p class="footerparagraph">+91 9840493087</p>
-                                    </section>
+                                    </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <section class="footersection" id="footercontactsection">
+                                    <div class="footersection" id="footercontactsection">
                                         <i class="fa fa-pencil circle-icon"></i>
                                         <p class="footer-icon-design">WRITE US</p>
                                         <p class="footerparagraph">jblatha@gmail.com</p>
-                                    </section>
+                                    </div>
                                 </div>
                                 <div class="col-md-3 socialiconsalign">
-                                    <section class="socialicons" id="socialicons">
+                                    <div class="socialicons" id="socialicons">
 
-                                        <a id="facebooklink" name="facebooklink" href="" alt="facebook link" aria-label="Facebook link">
+                                        <a id="facebooklink"  href=""  aria-label="Facebook link">
                                             <i class="fa fa-facebook-square fa-3x"></i>
                                         </a>
-                                        <a id="twitterlink" name="twitterlink" href="" alt="twitter link" aria-label="Twitter link">
+                                        <a id="twitterlink"  href=""  aria-label="Twitter link">
                                             <i class="fa fa-twitter-square fa-3x "></i>
                                         </a>
-                                        <a id="googlelink" name="googlelink" href="" alt="google link" aria-label="Google link">
+                                        <a id="googlelink"  href=""  aria-label="Google link">
                                             <i class="fa fa-google-plus-square fa-3x"></i>
                                         </a>
-                                        <a id="linkedinlink" name="linkedinlink" href="" alt="linkedin" aria-label="Linkedin link">
+                                        <a id="linkedinlink"  href="" aria-label="Linkedin link">
                                             <i class="fa fa-linkedin-square fa-3x"></i>
                                         </a>
 
-                                    </section>
+                                    </div>
                                 </div>
-                                <hr>
+
 
                             </div>
                             <div class="row" id="footer-row2">
                                 <div class="col-md-12 copyright">
-                                    <p>@Copyright 2018 - Delicious. All rights reserved.</p>
+                                    <p class="footercopyright">@Copyright 2018 - Delicious. All rights reserved.</p>
                                 </div>
                             </div>
 
-                        </footer>
+                        </div>
 
 
 
@@ -484,7 +498,7 @@
 
     <!-- Modal section starts here-->
 
-    <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-label="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
 
@@ -497,6 +511,45 @@
                     </button>
                     </div>
                     <div class="modal-body">
+                        <p class="radiotextcolor">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="radio-inline">
+                        Vegiterian
+                        </label>
+
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="radio-inline">
+                        Non Vegiterian
+                        </label>
+                        </p>
+
+                        <!--<div class="menudropdown">
+                            <button class="btn btn-default dropdown-toggle" 
+                                    type="button" 
+                                    id="menu1" 
+                                    data-toggle="dropdown">Drinks
+                            <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li role="presentation">
+                                    <a role="menuitem" href="#">Coke</a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" href="#">Pepsi</a>
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" href="#">Mirinda</a>
+                                </li>
+                                <li role="presentation" class="divider">
+
+                                </li>
+                                <li role="presentation">
+                                    <a role="menuitem" href="#">Thumsup</a>
+                                </li>
+                            </ul>
+                        </div>-->
+
+
 
                         <div class="custom-control custom-checkbox">
                             <p>
@@ -520,6 +573,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="#" data-toggle="tooltip" title="Some tooltip text!">Hover over me</a>
                         <button type="button" class="btn btn-primary">Order</button>
                     </div>
                 </form>
@@ -533,7 +587,9 @@
 
     <!-- modal section ends here -->
     <script src="js/jquery.min.js"></script>
-    <script src="js/popper.js"></script>
+    <script src="./node_modules/popper.js/dist/umd/popper.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>-->
+
     <script src="js/bootstrap.min.js"></script>
 
 </body>

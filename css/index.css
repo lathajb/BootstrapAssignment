@@ -6332,17 +6332,26 @@ a.text-dark:hover, a.text-dark:focus {
   margin: 0px; }
 
 /************************  Footer section *************************/
-footer > div {
-  background-image: url(../img/pattern_bg.jpg); }
-
 #footer-row1 {
-  margin: 10px;
-  margin: 0px;
-  margin: 0px;
-  margin: 0px; }
+  margin-top: 10px;
+  background-image: url(../img/pattern_bg.jpg);
+  margin-left: 0px;
+  margin-right: 0px; }
 
 #footer-row2 {
+  background-image: url(../img/pattern_bg.jpg);
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px; }
+
+.footercopyright {
   margin: 0px; }
+
+.radiotextcolor {
+  color: #29ac6a; }
+
+.menudropdown {
+  margin: 10px; }
 
 .footersection {
   text-align: center;

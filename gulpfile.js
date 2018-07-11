@@ -16,7 +16,7 @@ gulp.task('sass',() =>{
 
 gulp.task('js',() =>{
     return gulp
-    .src(['node_modules/bootstrap/dist/js/bootstrap.min.js','node_modules/jquery/jquery.min.js','node_modules/popper/dist/popper.js'])
+    .src(['node_modules/bootstrap/dist/js/bootstrap.min.js','node_modules/jquery/jquery.min.js','node_modules/popper.js/dist/umd//popper.js'])
     .pipe(gulp.dest('js'))
     .pipe(browserSync.stream());
 })
