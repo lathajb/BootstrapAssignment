@@ -6367,6 +6367,10 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 21px;
   font-weight: 900; }
 
+.footerparagraph {
+  margin: 0px;
+  font-size: 17px; }
+
 .footersection {
   text-align: center;
   font-size: 14px;
@@ -6431,7 +6435,7 @@ a.text-dark:hover, a.text-dark:focus {
 .copyright p {
   color: white;
   text-align: center;
-  font-size: 12px; }
+  font-size: 15px; }
 
 /************************************** modal *****************************/
 .modal-header > #exampleModalLabel {
