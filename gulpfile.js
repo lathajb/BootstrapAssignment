@@ -16,7 +16,7 @@ gulp.task('sass',() =>{
 
 gulp.task('js',() =>{
     return gulp
-    .src(['node_modules/bootstrap/dist/js/bootstrap.min.js','node_modules/jquery/jquery.min.js','node_modules/popper.js/dist/umd//popper.js'])
+    .src(['node_modules/bootstrap/dist/js/bootstrap.min.js','node_modules/jquery/jquery.min.js','node_modules/popper.js/dist/umd//popper.min.js'])
     .pipe(gulp.dest('js'))
     .pipe(browserSync.stream());
 })
@@ -29,7 +29,7 @@ gulp.task('serve', ['sass'], function() {
        server: '.'
     });
 
-    gulp.watch("styles/*.scss", ['sass']);
+    gulp.watch("styles/*.scss", ['sass']).on('change', browserSync.reload);
     gulp.watch("*.html").on('change', browserSync.reload);
 });
 

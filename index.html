@@ -8,22 +8,10 @@
 
     <link rel="stylesheet" type="text/css" href="./node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
-    <!--<script>
-        $(function(){
-
-        $(".dropdown-menu li a").click(function(){
-
-        $(".btn:first-child").text($(this).text());
-        $(".btn:first-child").val($(this).text());
-
-    });
-
-    });
-    </script>-->
+    
 </head>
 
 <body class="mw-100 mh-100">
-
 
     <!-- Preloader 
 	<div id="loading">
@@ -72,7 +60,7 @@
 
                    
                 </ul>
-                 <a  aria-label="Order Modal" href="#exampleModal" data-toggle="modal" data-target="#exampleModal">
+                 <a  aria-label="Order Modal" href="#exampleModal" data-toggle="modal"  data-toggle="tooltip" title="Quick access to Order" data-target="#exampleModal">
                         <i class="fa fa-cog fa-settingsicon"></i>
                 </a>
                 <div class="tab-content" id="myTabContent">
@@ -572,9 +560,8 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <a href="#" data-toggle="tooltip" title="Some tooltip text!">Hover over me</a>
-                        <button type="button" class="btn btn-primary">Order</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="tooltip" title="Close">Close</button>
+                        <button type="button" class="btn btn-primary" data-toggle="tooltip" title="Order">Order</button>
                     </div>
                 </form>
 
@@ -587,10 +574,13 @@
 
     <!-- modal section ends here -->
     <script src="js/jquery.min.js"></script>
-   
-    <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <!--<script src="./node_modules/popper.js/dist/umd/popper.js"></script>-->
+    <script src="js/bootstrap.min.js"></script>
+    <script defer>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    </script>
 
 </body>
 
